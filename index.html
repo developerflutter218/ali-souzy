@@ -35,9 +35,9 @@
                             dark: '#C62828',
                         },
                         base: {
-                            light: '#FCFBF9',
-                            DEFAULT: '#F5F0E6',
-                            dark: '#EAE4D9',
+                            light: '#FBF8F1', // Warmer light beige
+                            DEFAULT: '#F1E3D3', // More pronounced beige
+                            dark: '#E2CDBA', // Deeper beige shadow
                         },
                         ink: {
                             light: '#495057',
@@ -59,11 +59,12 @@
         }
 
         body {
-            background-color: #F5F0E6;
+            background-color: #F1E3D3; /* Updated to beige */
             color: #212529;
             overflow-x: hidden;
             -webkit-tap-highlight-color: transparent;
-            background: radial-gradient(circle at 50% 0%, #FCFBF9 0%, #F5F0E6 50%, #EAE4D9 100%);
+            /* Updated gradient for a richer beige feel */
+            background: radial-gradient(circle at 50% 0%, #FBF8F1 0%, #F1E3D3 50%, #E2CDBA 100%);
             scroll-behavior: smooth;
         }
 
@@ -111,7 +112,7 @@
         .delay-200 { transition-delay: 200ms; }
         .delay-300 { transition-delay: 300ms; }
 
-        /* 3D Envelope Physics */
+        /* 3D Envelope Physics (Updated with new beige colors) */
         .envelope-scene { perspective: 1500px; }
         .envelope-wrapper {
             transform-style: preserve-3d;
@@ -120,14 +121,14 @@
         }
         .envelope-wrapper:hover { transform: scale(1.03) rotateX(3deg); }
         
-        .envelope-back { background: #EAE4D9; }
-        .envelope-pocket-left { clip-path: polygon(0 0, 50% 50%, 0 100%); background: linear-gradient(90deg, #F5F0E6, #EAE4D9); }
-        .envelope-pocket-right { clip-path: polygon(100% 0, 100% 100%, 50% 50%); background: linear-gradient(-90deg, #F5F0E6, #EAE4D9); }
-        .envelope-pocket-bottom { clip-path: polygon(0 100%, 50% 50%, 100% 100%); background: linear-gradient(0deg, #EAE4D9, #F5F0E6); }
+        .envelope-back { background: #E2CDBA; }
+        .envelope-pocket-left { clip-path: polygon(0 0, 50% 50%, 0 100%); background: linear-gradient(90deg, #F1E3D3, #E2CDBA); }
+        .envelope-pocket-right { clip-path: polygon(100% 0, 100% 100%, 50% 50%); background: linear-gradient(-90deg, #F1E3D3, #E2CDBA); }
+        .envelope-pocket-bottom { clip-path: polygon(0 100%, 50% 50%, 100% 100%); background: linear-gradient(0deg, #E2CDBA, #F1E3D3); }
         
         .envelope-flap {
             clip-path: polygon(0 0, 100% 0, 50% 60%);
-            background: linear-gradient(180deg, #FCFBF9, #EAE4D9);
+            background: linear-gradient(180deg, #FBF8F1, #E2CDBA);
             transform-origin: top;
             transform-style: preserve-3d;
             transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
